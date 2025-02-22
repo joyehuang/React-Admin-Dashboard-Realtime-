@@ -21,23 +21,10 @@
     "react-router-dom": "^7.2.0"
   },
   "devDependencies": {
-<<<<<<< HEAD
-<<<<<<< HEAD
     "@graphql-codegen/cli": "^5.0.5",
     "@graphql-codegen/import-types-preset": "^3.0.0",
     "@graphql-codegen/typescript": "^4.1.4",
     "@graphql-codegen/typescript-operations": "^4.5.0",
-=======
-=======
->>>>>>> f5b22e34a7e4ada6c2eaf98fe8a065efbc4eec3a
-    "@graphql-codegen/cli": "^5.0.0",
-    "@graphql-codegen/import-types-preset": "^3.0.0",
-    "@graphql-codegen/typescript": "^4.0.1",
-    "@graphql-codegen/typescript-operations": "^4.0.1",
-<<<<<<< HEAD
->>>>>>> f5b22e34a7e4ada6c2eaf98fe8a065efbc4eec3a
-=======
->>>>>>> f5b22e34a7e4ada6c2eaf98fe8a065efbc4eec3a
     "@types/node": "^18.16.2",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
@@ -49,16 +36,8 @@
     "eslint-plugin-react-refresh": "^0.3.4",
     "prettier": "^3.5.1",
     "typescript": "^5.4.2",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "vite": "^4.3.1",
     "vite-tsconfig-paths": "^5.1.4"
-=======
-    "vite": "^4.3.1"
->>>>>>> f5b22e34a7e4ada6c2eaf98fe8a065efbc4eec3a
-=======
-    "vite": "^4.3.1"
->>>>>>> f5b22e34a7e4ada6c2eaf98fe8a065efbc4eec3a
   },
   "scripts": {
     "dev": "refine dev",
