@@ -2,16 +2,16 @@ import { Authenticated, GitHubBanner, Refine, WelcomePage } from "@refinedev/cor
 import { DevtoolsPanel, DevtoolsProvider } from "@refinedev/devtools";
 import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
 
-import { useNotificationProvider } from "@refinedev/antd";
+import { RefineThemes, useNotificationProvider } from "@refinedev/antd";
 import "@refinedev/antd/dist/reset.css";
-
+import { resources } from "./config/resources";
 import { dataProvider, liveProvider, authProvider } from "./providers";
 import routerBindings, {
   CatchAllNavigate,
   DocumentTitleHandler,
   UnsavedChangesNotifier,
 } from "@refinedev/react-router";
-import { App as AntdApp} from "antd";
+import { App as AntdApp, ConfigProvider} from "antd";
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import { Home, Login, Register, ForgotPassword } from "./pages";
 import Layout from "./component";
@@ -20,6 +20,7 @@ function App() {
   return (
     <BrowserRouter>
       <GitHubBanner />
+      <ConfigProvider theme={RefineThemes.Blue}>
       <RefineKbarProvider>
           <AntdApp>
             <DevtoolsProvider>
@@ -29,6 +30,7 @@ function App() {
                 notificationProvider={useNotificationProvider}
                 routerProvider={routerBindings}
                 authProvider={authProvider}
+                resources={resources}
                 options={{
                   syncWithLocation: true,
                   warnWhenUnsavedChanges: true,
@@ -62,7 +64,8 @@ function App() {
               <DevtoolsPanel />
             </DevtoolsProvider>
           </AntdApp>
-      </RefineKbarProvider>
+        </RefineKbarProvider>
+      </ConfigProvider>
     </BrowserRouter>
   );
 }
